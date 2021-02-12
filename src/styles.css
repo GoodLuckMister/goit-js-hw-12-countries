@@ -18,3 +18,12 @@ body {
    */
   background-image: url('./images/bg-pattern.png');
 }
+.card-body {
+  display: flex;
+}
+.name-country {
+  text-align: center;
+}
+.new__message {
+  margin: auto;
+}

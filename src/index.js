@@ -1,21 +1,22 @@
 import './styles.css';
 import countryCardTmp from './templates/country.hbs';
 import debounce from 'lodash.debounce';
+import { myError } from './js/Pnotify';
 
 const refs = {
   cardContainer: document.querySelector('.js-card__container'),
   inputRef: document.querySelector('.js__input'),
 };
 
-refs.inputRef.addEventListener('input', onSearch);
+refs.inputRef.addEventListener('input', debounce(onSearch, 500));
 
 function onSearch(e) {
-  e.preventDefault();
   const inputText = refs.inputRef.value;
-
   fetchCountryByName(inputText)
     .then(renderCountryCard)
-    .catch(error => console.log(error));
+    .catch(error => {
+      console.dir(error);
+    });
 }
 
 function fetchCountryByName(countryName) {
