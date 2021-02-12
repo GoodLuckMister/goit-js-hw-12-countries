@@ -2,10 +2,10 @@
 <div class="card">
     <h2 class="name-country">{{name}}</h2>
     <div class="card-body">
-        <div>
-            <p>Capital: {{capital}}</p>
-            <p>Populations: {{population}}</p>
-            <p>Languages:</p>
+        <div class="info__country">
+            <p> <b>Capital:</b> {{capital}}</p>
+            <p> <b>Populations:</b> {{population}}</p>
+            <p> <b>Languages:</b></p>
             <ul class="lang-list">
                 {{#each languages}}
                 <li>{{name}}</li>
@@ -13,8 +13,8 @@
             </ul>
         </div>
 
-        <div class="card-img-right">
-            <img src="{{flag}}" alt="{{name}}">
+        <div>
+            <img src="{{flag}}" alt="{{name}}" class="card-img-right">
         </div>
     </div>
 </div>

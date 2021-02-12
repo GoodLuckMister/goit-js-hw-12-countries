@@ -1,7 +1,12 @@
-import { alert, notice, info, success, error } from '@pnotify/core';
 import '@pnotify/core/dist/BrightTheme.css';
+import { error } from '@pnotify/core';
 
-export const myError = error({
-  text: ' ',
-  addClass: 'new__message',
-});
+export default function () {
+  const myError = error({
+    title: 'Too many matches found.Please enter a more specific query.',
+    closer: false,
+    sticker: false,
+    icon: true,
+    hide: true,
+  });
+}
