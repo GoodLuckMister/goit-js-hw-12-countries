@@ -16,6 +16,9 @@ body {
 
   background-image: url('./images/bg-pattern.png');
 }
+.input-section {
+  display: flex;
+}
 .info__country {
   text-align: start;
 }
@@ -45,4 +48,5 @@ body {
   width: 250px;
   height: 30px;
   border-style: groove;
+  margin-right: 30px;
 }

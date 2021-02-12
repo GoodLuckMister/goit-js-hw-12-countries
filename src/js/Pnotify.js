@@ -8,5 +8,6 @@ export default function () {
     sticker: false,
     icon: true,
     hide: true,
+    delay: 4000,
   });
 }

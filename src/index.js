@@ -10,9 +10,9 @@ const refs = getRefs();
 const fetchCountryByName = new CountryApiService();
 
 refs.inputRef.addEventListener('input', debounce(onSearch, 500));
+refs.clear.addEventListener('click', clearList);
 
 function onSearch(e) {
-  e.preventDefault();
   const inputText = refs.inputRef.value;
   fetchCountryByName
     .fetchArticles(inputText)
@@ -42,4 +42,10 @@ function propertyQuery(r) {
   if (r.length === 1) {
     renderCountryCard(r);
   }
+}
+
+function clearList() {
+  refs.renderCountryList.innerHTML = '';
+  refs.cardContainer.innerHTML = '';
+  refs.inputRef.value = '';
 }
