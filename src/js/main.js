@@ -16,7 +16,7 @@ function onSearch(e) {
   fetchCountryByName
     .fetchCountries(inputText)
     .then(propertyQuery)
-    .catch(console.log);
+    .catch(myError);
 }
 
 function renderCountryList(country) {

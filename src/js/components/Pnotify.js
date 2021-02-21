@@ -1,13 +1,11 @@
+import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
-import { error } from '@pnotify/core';
+
+import { error } from '@pnotify/core/dist/PNotify';
 
 export default function () {
-  const myError = error({
+  error({
     title: 'Too many matches found.Please enter a more specific query.',
-    closer: false,
-    sticker: false,
-    icon: true,
-    hide: true,
     delay: 1000,
   });
 }

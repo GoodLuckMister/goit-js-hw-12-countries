@@ -38,11 +38,6 @@ body {
   margin: 0;
 }
 .container {
-  min-width: 300px;
-  max-width: 1000px;
-  text-align: center;
-  padding-left: 400px;
-  padding-right: 400px;
 }
 .js__input {
   width: 250px;
